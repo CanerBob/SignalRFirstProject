@@ -1,0 +1,56 @@
+﻿@model UpdateTestimonialViewModel
+@{
+    ViewData["Title"] = "UpdateTestimonial";
+    Layout = "~/Views/AdminLayout/_adminLayout.cshtml";
+}
+<div class="content">
+	<div class="container-fluid">
+		<h4 class="page-title">Referans İşlemleri</h4>
+		<div class="row">
+			<div class="col-md-12">
+				<form method="post">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title">Referans Güncelle</div>
+						</div>
+						<input type="hidden" asp-for="TestimonialId"/>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="Name">İsim Soyisim</label>
+								<input type="text" class="form-control" asp-for="Name" id="Name">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="Name">Başlık</label>
+								<input type="Title" class="form-control" asp-for="Title" id="Title">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="Comment">Yorum</label>
+								<input type="Title" class="form-control" asp-for="Comment" id="Comment">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="ImageUrl">Resim</label>
+								<input type="Title" class="form-control" asp-for="ImageUrl" id="ImageUrl">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="Status">Durum</label>
+								<input type="Title" class="form-control" asp-for="Status" id="Status">
+							</div>
+						</div>
+						<div class="card-action">
+							<button class="btn btn-primary">Referans Güncelle</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+

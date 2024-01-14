@@ -1,0 +1,43 @@
+﻿@model CreateAboutViewModel
+@{
+    ViewData["Title"] = "CreateAbout";
+    Layout = "~/Views/AdminLayout/_adminLayout.cshtml";
+}
+<div class="content">
+	<div class="container-fluid">
+		<h4 class="page-title">Hakkımda İşlemleri</h4>
+		<div class="row">
+			<div class="col-md-12">
+				<form method="post">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title">Hakkımızda Düzenle</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="Title">Başlık Girin</label>
+								<input type="text" class="form-control" asp-for="Title" id="Title" placeholder="Başlık">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="ImageUrl">Görsel Giriniz</label>
+								<input type="text" class="form-control" asp-for="ImageUrl" id="ImageUrl" placeholder="Görsel">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="Description">Açıklama Girin</label>
+								<textarea rows="5" class="form-control" asp-for="Description" id="Description"></textarea>
+							</div>
+						</div>
+						<div class="card-action">
+							<button class="btn btn-primary">Hakkımızda Düzenle</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+

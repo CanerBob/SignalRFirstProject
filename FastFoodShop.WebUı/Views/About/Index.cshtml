@@ -1,0 +1,49 @@
+﻿@model List<ResultAboutViewModel>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/AdminLayout/_adminLayout.cshtml";
+}
+<div class="content">
+	<div class="container-fluid">
+		<h4 class="page-title">Ana Sayfa Hakkımız İşlemleri</h4>
+		<div class="row">
+			<div class="col-md-12">
+
+				<div class="card">
+					<div class="card-header">
+						<div class="card-title">Hakkımızda Listesi </div>
+					</div>
+					<div class="card-body">
+						<div class="card-sub">
+							Hakkımızda Alanı İle İlgili İşlemleri Aşağıdan Görüntüleyebilirsiniz. Tema Bütünlüğü İçin 1 Tane Hakkımızda Alanı Oluşturmayı  Unutmayın!
+						</div>
+						<table class="table mt-3">
+							<thead>
+								<tr>
+									<th scope="col">Başlık</th>
+									<th scope="col">Açıklama</th>
+									<th scope="col">Güncelle</th>
+									<th scope="col">Sil</th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach (var item in Model)
+								{
+									<tr>
+										<td>@item.Title</td>
+										<td>@item.Description</td>
+										<td><a href="/About/UpdateAbout/@item.AboutId" class="btn btn-outline-primary">Güncelle</a></td>
+										<td><a href="/About/DeleteAbout/@item.AboutId" class="btn btn-outline-danger">Sil</a></td>
+										<td></td>
+									</tr>
+								}
+							</tbody>
+						</table>
+						<a href="/About/CreateAbout/" class="btn btn-outline-primary">Hakkımızda Düzenle</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
